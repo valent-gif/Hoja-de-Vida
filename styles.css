@@ -62,6 +62,18 @@ img{
 }
 
 .cabecera h1{
-    
+    margin: o;
+    font-size: 1.75rem;
 }
 
+.cabecera p{
+    margin: 0;
+}
+
+.Foto{
+    width: 7.5rem;
+    border-radius: 50%;
+    border: 0.25rem solid var(--amarillo);
+}
+
+/*R8: Menu de navegacion
