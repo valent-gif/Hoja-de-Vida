@@ -36,6 +36,32 @@ img{
 .pagina{
     max-width: 92rem;
     margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "cabecera"
+    "menu"
+    "pricipal"
+    "habilidades"
+    "pie";
+}
+
+.cabecera{
+    grid-area: cabecera;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background: var(--azul-oscuro);
+    color: var(--crema);
+    border-radius: 0.75rem;
+}
+
+.cabecera h1{
     
 }
 
