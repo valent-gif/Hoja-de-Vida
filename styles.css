@@ -1,0 +1,41 @@
+/*Paleta de Colores de la hoja de Vida*/
+:root{
+  --crema: #FBF8CC;
+  --azul-oscuro: #2B2D42;
+  --turquesa: #219EBC;
+  --amarillo: #FFB703;
+  --celeste: #8ECAE6;
+}
+
+/* R2: Mobile First: Todo lo de aqui abajo es el diseño base del celular*/
+
+*,
+*::before
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system,'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    background: var(--crema);
+    color: var(--azul-oscuro);
+}
+
+/*R7: Las imagenes nunca se desbordan*/
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*R6:Ancho maximo, centrado y unidades relativas*/
+/*R4:Grid por areas (celular: una sola columna)*/
+
+.pagina{
+    max-width: 92rem;
+    margin: 0 auto;
+    
+}
+
