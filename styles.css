@@ -76,4 +76,30 @@ img{
     border: 0.25rem solid var(--amarillo);
 }
 
-/*R8: Menu de navegacion
+/*R8: Menu de navegacion*/
+.menu ul{
+    display: block;
+    padding: o.5rem 1rem;
+    background: var(--celeste);
+    color: var(--azul-oscuro);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"]{
+    background: var(--amarillo);
+}
+
+a:focus-visible {
+    outline: 0.1875rem solid var(--azul-oscuro);
+    outline-offset: 0.125rem;
+}
+
+.principal {
+    grid-area: principal;
+    display: grid;
+    gap: 1rem;
+}
+
