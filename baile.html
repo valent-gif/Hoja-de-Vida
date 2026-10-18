@@ -1,57 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!-- R1:viewport -->
+    <!-- R1: viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baile | Valentina</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="baile">
-    <div class="cabecera" id="inicio">
+<div class="pagina pagina-baile">
 
     <header class="cabecera" id="inicio">
-        <p class="sitio"> Valentina Dance</p>
+        <p class="sitio">Valentina Dance</p>
     </header>
 
-    <!--R8: El menu es igual al de las otras paginas. Solo cambia aria-current-->
-    <nav class="menu" aria-label="Menu principal">
+    <!-- R8: El menú es igual al de las otras páginas. Solo cambia aria-current -->
+    <nav class="menu" aria-label="Menú principal">
         <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="baile.html" aria-current="page">Baile</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="baile.html" aria-current="page">Baile</a></li>
         </ul>
     </nav>
 
     <section class="principal">
-        <div class="breakdance">
-            <img src="img/baile-breakdance.jpg.jpg" alt=" Persona bailando en el piso">
-            <div class="breakdance-texto">
-                <h1>MI mundo del baile</h1>
-                <p>El baile no es solo moverse por un escenario, es expresar todos los sentientos, pensamientos por medio de movimientos que generan traquilidad. Bailar no solo es diversion, es un espace, una alegria que siente el cuepo cuando se mueve y puede expresar y mostrar todo lo que siente</p>
+        <div class="hero">
+            <img src="img/baile-breakdance.jpg.jpg" alt="Persona bailando en el piso">
+            <div class="hero-texto">
+                <h1>Mi mundo del baile</h1>
             </div>
         </div>
+        <p>El baile no es solo moverse por un escenario, es expresar todos los sentimientos, pensamientos por medio de movimientos que generan tranquilidad. Bailar no solo es diversión, es un espacio, una alegría que siente el cuerpo cuando se mueve y puede expresar y mostrar todo lo que siente.</p>
     </section>
 
     <section class="ritmos">
-        <h2>Mis ritmos Favoritos</h2>
-        <!--R5: Tarjetas con repeat(auto-fit, minmax(...))en tarjetas-->
+        <h2>Mis ritmos favoritos</h2>
+        <!-- R5: tarjetas con repeat(auto-fit, minmax(...)) en .tarjetas -->
         <ul class="tarjetas">
-
-           <li class="ritmo">
-            <img src="img/ritmo-1.jpg" alt="Pareja bailando el ritmo 1" loading="lazy">
-            <h3>Ritmo 1</h3>
-            <p>“Que locura enamorarme yo de ti” </p>
-           </li>
-
             <li class="ritmo">
-                <img src="img/ritmo-2.jpg" alt="Personas bailando champeta"loading="lazy">
-            <h3>Ritmo 2</h3>
-            <p>"No dejo trauma, dejo ganas de volver"</p>
+                <img src="img/ritmo-1.jpg" alt="Pareja bailando el ritmo 1" loading="lazy">
+                <h3>Ritmo 1</h3>
+                <p>“Que locura enamorarme yo de ti”</p>
             </li>
 
             <li class="ritmo">
-                <img src="img/ritmo-3.jpg" alt="Pareja bailando Bachata" loading="lazy">
+                <img src="img/ritmo-2.jpg" alt="Personas bailando champeta" loading="lazy">
+                <h3>Ritmo 2</h3>
+                <p>"No dejo trauma, dejo ganas de volver"</p>
+            </li>
+
+            <li class="ritmo">
+                <img src="img/ritmo-3.jpg" alt="Pareja bailando bachata" loading="lazy">
                 <h3>Ritmo 3</h3>
                 <p>"Si el amor fuera fácil… la bachata no existiría".</p>
             </li>
@@ -59,22 +58,21 @@
     </section>
 
     <section class="galeria">
-        <h2>Galeria</h2>
-        <div class="Mosaico">
+        <h2>Galería</h2>
+        <div class="mosaico">
             <img src="img/galeria-1.jpg" alt="Manejar el espacio" loading="lazy">
             <img src="img/galeria-2.jpg" alt="Movimientos fuertes y amplios" loading="lazy">
-            <img src="img/galeria-3.jpg" alt="Expresion facial" loading="lazy">
+            <img src="img/galeria-3.jpg" alt="Expresión facial" loading="lazy">
         </div>
     </section>
 
- <footer class="pie">
-      <p>
-        Imágenes: Valentina
-        <a href="#inicio">Volver arriba ↑</a>
-      </p>
+    <footer class="pie">
+        <p>
+            Imágenes: Valentina ·
+            <a href="#inicio">Volver arriba ↑</a>
+        </p>
     </footer>
 
-</body>
-    
+</div>
 </body>
 </html>
