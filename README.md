@@ -41,11 +41,11 @@ Antes de programar diseñé cada página en Canva, en versión celular y computa
 
 ### Celular (dispositivo real)
 
-![Sitio publicado en celular](capturas/celular.png)
+![Sitio publicado en celular](capturas/celular.jpeg)
 
 ### Computador
 
-![Sitio publicado en computador](capturas/computador.png)
+![Sitio publicado en computador](capturas/computador.jpeg)
 
 ## Breakpoints
 
