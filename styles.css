@@ -1,189 +1,376 @@
-/*Paleta de Colores de la hoja de Vida*/
-:root{
-  --crema: #FBF8CC;
-  --azul-oscuro: #2B2D42;
-  --turquesa: #219EBC;
-  --amarillo: #FFB703;
-  --celeste: #8ECAE6;
+/* Colores del sitio. Por defecto: paleta de la hoja de vida */
+:root {
+  --fondo: #FBF8CC;
+  --texto: #2B2D42;
+  --cabecera: #2B2D42;
+  --texto-cabecera: #FBF8CC;
+  --menu: #219EBC;
+  --enlace-menu: #8ECAE6;
+  --acento: #FFB703;
+  --suave: #8ECAE6;
 }
 
-/* R2: Mobile First: Todo lo de aqui abajo es el diseño base del celular*/
+/* La página de baile (body class="baile") cambia solo los colores */
+.baile {
+  --fondo: #C7C7C7;
+  --texto: #1a1a1a;
+  --cabecera: #A660CE;
+  --texto-cabecera: #FFFFFF;
+  --menu: #5399B0;
+  --enlace-menu: #C7C7C7;
+  --acento: #00D292;
+  --suave: #B794CB;
+}
 
+/* R2: Mobile First. Todo lo de aquí abajo es el diseño base para celular */
 *,
-*::before
-*::after{
-    box-sizing: border-box;
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    font-family: system-ui, -apple-system,'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    background: var(--crema);
-    color: var(--azul-oscuro);
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background: var(--fondo);
+  color: var(--texto);
 }
 
-/*R7: Las imagenes nunca se desbordan*/
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* R7: las imágenes nunca se desbordan */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/*R6:Ancho maximo, centrado y unidades relativas*/
-/*R4:Grid por areas (celular: una sola columna)*/
-
-.pagina{
-    max-width: 92rem;
-    margin: 0 auto;
-    padding: 1rem;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-    grid-template-areas:
+/* R6: ancho máximo, centrado y unidades relativas */
+/* R4: grid por áreas (celular: una sola columna) */
+.pagina {
+  max-width: 92rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
     "cabecera"
     "menu"
-    "pricipal"
+    "principal"
     "habilidades"
     "pie";
 }
 
-.cabecera{
-    grid-area: cabecera;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    background: var(--azul-oscuro);
-    color: var(--crema);
-    border-radius: 0.75rem;
+/* R4: la página de baile tiene otras áreas */
+.pagina-baile {
+  grid-template-areas:
+    "cabecera"
+    "menu"
+    "principal"
+    "ritmos"
+    "galeria"
+    "pie";
 }
 
-.cabecera h1{
-    margin: o;
-    font-size: 1.75rem;
+.cabecera {
+  grid-area: cabecera;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background: var(--cabecera);
+  color: var(--texto-cabecera);
+  border-radius: 0.75rem;
 }
 
-.cabecera p{
-    margin: 0;
+.cabecera h1 {
+  margin: 0;
+  font-size: 1.75rem;
 }
 
-.Foto{
-    width: 7.5rem;
-    border-radius: 50%;
-    border: 0.25rem solid var(--amarillo);
+.cabecera p {
+  margin: 0;
 }
 
-/*R8: Menu de navegacion*/
-.menu ul{
-    display: block;
-    padding: o.5rem 1rem;
-    background: var(--celeste);
-    color: var(--azul-oscuro);
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 0.5rem;
+.sitio {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.avatar {
+  width: 7.5rem;
+  border-radius: 50%;
+  border: 0.25rem solid var(--acento);
+}
+
+/* R8: menú de navegación */
+.menu {
+  grid-area: menu;
+  padding: 0.75rem;
+  background: var(--menu);
+  border-radius: 0.75rem;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  background: var(--enlace-menu);
+  color: var(--texto);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
 }
 
 .menu a:hover,
-.menu a[aria-current="page"]{
-    background: var(--amarillo);
+.menu a[aria-current="page"] {
+  background: var(--acento);
 }
 
 a:focus-visible {
-    outline: 0.1875rem solid var(--azul-oscuro);
-    outline-offset: 0.125rem;
+  outline: 0.1875rem solid var(--texto);
+  outline-offset: 0.125rem;
 }
 
 .principal {
-    grid-area: principal;
-    display: grid;
-    gap: 1rem;
+  grid-area: principal;
+  display: grid;
+  gap: 1rem;
 }
 
 .bloque {
-    padding: 1rem 1.25rem;
-    background: var(--celeste);
-    border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--suave);
+  border-radius: 0.75rem;
 }
 
 .bloque h2,
-.habilidades h2{
-    margin-top: 0;
+.habilidades h2,
+.ritmos h2,
+.galeria h2 {
+  margin-top: 0;
 }
 
-.habilidades{
-    grid-area: habilidades;
+.habilidades {
+  grid-area: habilidades;
 }
 
-/* R5:Tarjetas que se acomodan solas segun el espacio disponible*/
-.tarjetas{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+/* R5: tarjetas que se acomodan solas según el espacio disponible */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .tarjeta {
-    padding: 1.25rem 1rem;
-    text-align: center;
-    font-weight: 600;
-    background: var(--amarillo);
-    border-radius: 0.75rem;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  background: var(--acento);
+  border-radius: 0.75rem;
+}
+
+/* Página de baile: imagen principal con el título encima */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.hero img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.hero-texto {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  max-width: calc(100% - 2rem);
+  padding: 0.75rem 1rem;
+  background: var(--cabecera);
+  color: var(--texto-cabecera);
+  border-radius: 0.5rem;
+}
+
+.hero-texto h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-texto p {
+  margin: 0.25rem 0 0;
+}
+
+/* Página de baile: tarjetas de ritmos (usan la grilla .tarjetas) */
+.ritmos {
+  grid-area: ritmos;
+}
+
+.ritmo {
+  overflow: hidden;
+  background: var(--suave);
+  border-radius: 0.75rem;
+}
+
+.ritmo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.ritmo h3 {
+  margin: 0;
+  padding: 0.75rem 1rem 0;
+  font-size: 1.125rem;
+}
+
+.ritmo p {
+  margin: 0;
+  padding: 0.25rem 1rem 1rem;
+}
+
+/* Página de baile: galería en mosaico (celular: 2 columnas) */
+.galeria {
+  grid-area: galeria;
+}
+
+.mosaico {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 8rem;
+  gap: 0.75rem;
+}
+
+.mosaico img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.mosaico img:nth-child(1),
+.mosaico img:nth-child(4) {
+  grid-column: span 2;
 }
 
 .pie {
-    grid-area: pie;
-    padding: 1rem;
-    text-align: center;
-    background: var(--azul-oscuro);
-    color: var(--crema);
-    border-radius: 0.75rem;
+  grid-area: pie;
+  padding: 1rem;
+  text-align: center;
+  background: var(--cabecera);
+  color: var(--texto-cabecera);
+  border-radius: 0.75rem;
 }
 
-.pie p{
-    margin: 0;
+.pie p {
+  margin: 0;
 }
 
-/*R3: breakpoints, de menor a mayor, al final del archivo*/
+.pie a {
+  color: var(--texto-cabecera);
+}
 
+.pie a:focus-visible {
+  outline-color: var(--texto-cabecera);
+}
+
+/* R3: breakpoints, de menor a mayor, al final del archivo */
 @media (min-width: 600px) {
-    .pagina {
-        padding: 1.5rem;
-        gap:1.5rem;
-    }
+  .pagina {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
 
-/* La cabecera pasa de columna a fila: foto a la izquierda*/
-.cabecera {
+  /* La cabecera pasa de columna a fila: avatar a la izquierda */
+  .cabecera {
     flex-direction: row;
     padding: 1.5rem 2rem;
     text-align: left;
-}
-.cabecera h1 {
+  }
+
+  .cabecera h1 {
     font-size: 2.25rem;
+  }
+
+  .hero img {
+    aspect-ratio: 16 / 7;
+  }
+
+  .hero-texto h1 {
+    font-size: 2rem;
+  }
+
+  /* El mosaico pasa a 4 columnas con imágenes de distintos tamaños */
+  .mosaico {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 9rem;
+  }
+
+  .mosaico img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .mosaico img:nth-child(4) {
+    grid-column: auto;
+    grid-row: span 2;
   }
 }
 
-@media (min-with: 1024px) {
-    /* R4: Las areas cambina de lugar, el menu pasa a la izquierda*/
-    .pagina {
-        grid-template-columns: 14rem 1fr;
-        grid-template-areas:
-        "cabecera cabecera"
-        "menu principal"
-        "menu habilidades"
-        "pie pie";
-    }
+@media (min-width: 1024px) {
+  /* R4: las áreas cambian de lugar, el menú pasa a la izquierda */
+  .pagina {
+    grid-template-columns: 14rem 1fr;
+    grid-template-areas:
+      "cabecera cabecera"
+      "menu principal"
+      "menu habilidades"
+      "pie pie";
+  }
 
-    .cabecera {
-        min-height: 11.6rem;
-    }
+  .pagina-baile {
+    grid-template-areas:
+      "cabecera cabecera"
+      "menu principal"
+      "menu ritmos"
+      "menu galeria"
+      "pie pie";
+  }
 
-    menu ul {
-        flex-direction: column;
-    }
+  .cabecera {
+    min-height: 11.6rem;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .hero img {
+    aspect-ratio: 16 / 6;
+  }
+
+  .hero-texto h1 {
+    font-size: 2.5rem;
+  }
+
+  .mosaico {
+    grid-auto-rows: 11rem;
+  }
 }
