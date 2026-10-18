@@ -2,7 +2,7 @@
 
 Sitio personal responsive con mi hoja de vida, un proyecto que ya desarrollé (la página de la panadería Pan-Pa'Ti) y una página sobre mi pasión por el baile. Está hecho con HTML y CSS (Grid y media queries), con enfoque Mobile First, y se ve bien en celular, tablet y computador.
 
-**Sitio publicado:** https://valent-gif.github.io/hoja-de-vida/
+**Sitio publicado:** https://valent-gif.github.io/Hoja-de-Vida.github.oi/
 
 ## Páginas
 
