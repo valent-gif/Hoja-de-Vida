@@ -149,4 +149,25 @@ a:focus-visible {
     margin: 0;
 }
 
+/*R3: breakpoints, de menor a mayor, al final del archivo*/
 
+@media (min-width: 600px) {
+    .pagina {
+        padding: 1.5rem;
+        gap:1.5rem;
+    }
+
+/* La cabecera pasa de columna a fila: foto a la izquierda*/
+.cabecera {
+    flex-direction: row;
+    padding: 1.5rem 2rem;
+    text-align: left;
+}
+.cabecera h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-with: 1024px) {
+    /* R4: Las areas cambina de lugar, el menu pasa a la izquierda*/
+}
