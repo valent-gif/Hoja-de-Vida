@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- R1: viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proyecto Pan-Pa'Ti: sitio web de una panadería artesanal.">
+  <title>Proyectos | Carlos David Fuentes Arzuaga</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="pagina pagina-proyectos">
+
+    <header class="cabecera" id="inicio">
+      <p class="sitio">Carlos David Fuentes Arzuaga · Proyectos</p>
+    </header>
+
+    <!-- R8: el mismo menú de las otras páginas. Solo cambia aria-current -->
+    <nav class="menu" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
+        <li><a href="baile.html">Baile</a></li>
+      </ul>
+    </nav>
+
+    <!-- Aquí va el proyecto Pan-Pa'Ti. Sus estilos viven dentro de .panaderia -->
+    <section class="principal panaderia">
+
+      <header class="pan-encabezado">
+        <h1>Pan-Pa'Ti</h1>
+        <img src="img/logo_panaderia.jpeg" alt="Logo de Pan-Pa'Ti" width="100" height="100">
+        <p><em>El sabor de lo auténtico, recién salido del horno.</em></p>
+        <p>Bienvenido a nuestra casa. Aquí cada preparación cuenta una historia: horneamos cada día de forma artesanal, combinando ingredientes 100% naturales con paciencia y el cariño de las recetas de siempre. Ven a disfrutar del aroma a pan fresco y consiente a tu paladar con lo bueno y lo real.</p>
+        <nav class="pan-menu" aria-label="Secciones de Pan-Pa'Ti">
+          <ul>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#opiniones">Opiniones</a></li>
+            <li><a href="#llegar">Cómo llegar</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="producto" id="productos">
+        <h2>Nuestros productos</h2>
+        <!-- R5: tarjetas con repeat(auto-fit, minmax(...)) -->
+        <div class="pan-tarjetas">
+          <article class="pan-tarjeta">
+            <img src="img/torta_chocolate.jpeg" alt="Torta de chocolate" width="100" height="100">
+            <h3>Torta de chocolate</h3>
+            <p>Deliciosa torta de chocolate, perfecta para cualquier ocasión especial.</p>
+          </article>
+
+          <article class="pan-tarjeta">
+            <img src="img/bomba.jpeg" alt="Bomba de crema" width="100" height="100">
+            <h3>Bomba de Crema</h3>
+            <p>Deliciosa bomba de crema, perfecta para satisfacer tu antojo.</p>
+          </article>
+
+          <article class="pan-tarjeta">
+            <img src="img/brazo_reina.jpeg" alt="Brazo de reina" width="100" height="100">
+            <h3>Brazo de reina</h3>
+            <p>Delicioso brazo de reina, ideal para compartir en familia.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="informacion" id="informacion">
+        <h2>Información</h2>
+        <h3>Horarios de atención</h3>
+        <ul>
+          <li>Lunes a Viernes 8:00 AM - 9:30 PM</li>
+          <li>Sábados y Domingos 8:00 AM - 8:00 PM</li>
+          <li>Festivos 8:00 AM - 6:00 PM</li>
+        </ul>
+
+        <h3>Pasos para hacer tu pedido</h3>
+        <ol>
+          <li>Selecciona los productos que deseas comprar</li>
+          <li>Llena el formulario de pedido</li>
+          <li>Realiza el pago</li>
+          <li>Recoge tu pedido en la tienda</li>
+        </ol>
+      </section>
+
+      <section class="recomendaciones">
+        <h2>Recomendaciones</h2>
+        <p>1. Para comprar el pan más fresco de la mañana, llega a las 8:00 AM.</p>
+        <p>2. Para los panes frescos, déjalos reposar antes de consumirlos.</p>
+        <p>3. Para mantener la frescura, almacena los panes en un lugar seco y fresco.</p>
+      </section>
+
+      <section class="opiniones" id="opiniones">
+        <h2>Opiniones de nuestros clientes</h2>
+        <blockquote>
+          <p>"Excelente servicio al cliente, muy amables y educados."</p>
+          <cite>Andi Rojas</cite>
+          <p>"El sabor del pan es delicioso y fresco, no sabe a harina industrial."</p>
+          <cite>Marisela Moratto</cite>
+          <p>"Los precios son asequibles para todo el público."</p>
+          <cite>Matias Rojas</cite>
+        </blockquote>
+      </section>
+
+      <section class="como-llegar" id="llegar">
+        <h2>Cómo llegar</h2>
+        <p>Calle 45 #10-12, El Carmen</p>
+        <p>Bucaramanga, Colombia</p>
+        <h3>Mapa de ubicación de Pan-Pa'Ti</h3>
+        <iframe title="Mapa de ubicación de Pan-Pa'Ti" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34991.78401533378!2d-73.11303077787896!3d7.098095367082704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e684100407d7fb7%3A0x9de7a89291fd3726!2sEl%20Carmen!5e0!3m2!1ses!2sco!4v1791744857380!5m2!1ses!2sco"
+          width="600"
+          height="450"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </section>
+
+      <footer class="pan-pie">
+        <p>&copy; 2026 Pan-Pa'Ti. Calle 45 #10-12, El Carmen, Bucaramanga.</p>
+        <p><abbr title="Teléfono">Tel.</abbr> 300 123 4567</p>
+        <p>
+          Síguenos en
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </p>
+        <p><a href="#inicio">Volver arriba</a></p>
+      </footer>
+
+    </section>
+
+    <footer class="pie">
+      <p>
+        <a href="mailto:tu.correo@ejemplo.com">tu.correo@ejemplo.com</a> ·
+        <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
