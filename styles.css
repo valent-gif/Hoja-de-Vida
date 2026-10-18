@@ -170,4 +170,20 @@ a:focus-visible {
 
 @media (min-with: 1024px) {
     /* R4: Las areas cambina de lugar, el menu pasa a la izquierda*/
+    .pagina {
+        grid-template-columns: 14rem 1fr;
+        grid-template-areas:
+        "cabecera cabecera"
+        "menu principal"
+        "menu habilidades"
+        "pie pie";
+    }
+
+    .cabecera {
+        min-height: 11.6rem;
+    }
+
+    menu ul {
+        flex-direction: column;
+    }
 }
