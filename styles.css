@@ -103,3 +103,28 @@ a:focus-visible {
     gap: 1rem;
 }
 
+.bloque {
+    padding: 1rem 1.25rem;
+    background: var(--celeste);
+    border-radius: 0.75rem;
+}
+
+.bloque h2,
+.habilidades h2{
+    margin-top: 0;
+}
+
+.habilidades{
+    grid-area: habilidades;
+}
+
+/* R5:Tarjetas que se acomodan solas segun el espacio disponible*/
+.tarjetas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
